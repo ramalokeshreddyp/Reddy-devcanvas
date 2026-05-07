@@ -30,60 +30,60 @@ const navItems = [
 
 const skillGroups = [
   {
-    title: 'Frontend',
-    description: 'Interfaces that stay readable, responsive, and fast.',
+    title: 'Languages',
+    description: 'Core programming languages I use for problem solving and delivery.',
     icon: Code2,
     items: [
-      { name: 'React', level: '92%' },
-      { name: 'TypeScript', level: '88%' },
-      { name: 'CSS', level: '94%' },
+      { name: 'Java', level: '95%' },
+      { name: 'C++', level: '91%' },
+      { name: 'Python', level: '89%' },
     ],
   },
   {
-    title: 'Motion',
-    description: 'Meaningful animation systems with performance in mind.',
-    icon: Sparkles,
+    title: 'Web Stack',
+    description: 'Frontend and backend tools used to build polished full-stack apps.',
+    icon: BriefcaseBusiness,
     items: [
-      { name: 'Framer Motion', level: '90%' },
-      { name: 'Scroll UX', level: '84%' },
-      { name: 'Parallax', level: '80%' },
+      { name: 'React', level: '96%' },
+      { name: 'Node.js', level: '90%' },
+      { name: 'Express / MongoDB', level: '88%' },
     ],
   },
   {
-    title: 'Product',
-    description: 'Design-aware thinking that keeps interfaces polished.',
+    title: 'Data & Tools',
+    description: 'Analytics and workflow tools I use to make decisions visible.',
     icon: Palette,
     items: [
-      { name: 'Design Systems', level: '86%' },
-      { name: 'Accessibility', level: '91%' },
-      { name: 'Performance', level: '87%' },
+      { name: 'Pandas / NumPy', level: '87%' },
+      { name: 'Power BI', level: '84%' },
+      { name: 'Git / Docker', level: '89%' },
     ],
   },
 ]
 
 const projects = [
   {
-    name: 'DevCanvas Portfolio',
+    name: 'Equilibrium Ledger Core',
     summary:
-      'A modern personal portfolio concept with layered gradients, scroll reveals, and a responsive content layout built to feel editorial and crisp.',
-    stack: ['React', 'Vite', 'Framer Motion', 'CSS'],
-    repo: 'https://github.com/ramalokeshreddyp/Reddy-devcanvas',
-    demo: '#hero',
+      'A high-integrity financial engine centered on double-entry bookkeeping, ACID-style consistency, and audit-friendly transaction handling.',
+    stack: ['TypeScript', 'Node.js', 'Docker', 'In-memory DB'],
+    repo: 'https://github.com/ramalokeshreddyp/Financial-Ledger-API-with-Double-Entry-Bookkeeping',
+    demo: 'https://financial-ledger-api-with-double-entry.onrender.com/',
   },
   {
-    name: 'Motion Notes Dashboard',
+    name: 'FatePick',
     summary:
-      'A dashboard-style project that emphasizes information hierarchy, soft glass panels, and animated content entry to make dense data feel approachable.',
-    stack: ['TypeScript', 'Responsive UI', 'Accessibility'],
-    repo: 'https://github.com/ramalokeshreddyp/motion-notes-dashboard',
-    demo: '#projects',
+      'A professional randomization app that handles fair team formation, bulk input, and export workflows with a polished interface.',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    repo: 'https://github.com/ramalokeshreddyp/fatepick',
+    demo: 'https://fatepick.vercel.app/',
   },
   {
-    name: 'Orbit Commerce Landing',
+    name: 'Code to Win',
     summary:
-      'A launch page built around storytelling sections, strong calls to action, and lightweight motion tuned to keep the page fast on mobile devices.',
-    stack: ['UI Design', 'Parallax', 'Performance'],
-    repo: 'https://github.com/ramalokeshreddyp/orbit-commerce-landing',
+      'A unified coding dashboard that aggregates competitive-programming profiles and organizes achievements across platforms.',
+    stack: ['React', 'Node.js', 'Express.js', 'MySQL'],
+    repo: 'https://github.com/ramalokeshreddyp/code_to_win',
     demo: '#contact',
   },
 ]
@@ -117,19 +117,20 @@ function App() {
   const orbYReverse = useTransform(scrollYProgress, [0, 1], [0, -120])
 
   const statItems = [
-    { value: '5+', label: 'Years of frontend learning' },
-    { value: '12', label: 'Design systems explored' },
-    { value: '100%', label: 'Responsive-first mindset' },
+    { value: '9.36', label: 'BTech CGPA at Aditya University' },
+    { value: '1912', label: 'LeetCode rating, Knight rank' },
+    { value: '2', label: 'Internships completed' },
+    { value: '500+', label: 'Problems solved across platforms' },
   ]
 
   return (
     <div className="page-shell">
       <header className="site-header">
-        <a className="brand" href="#hero" aria-label="Lokesh Reddy home">
+        <a className="brand" href="#hero" aria-label="Rama Lokesh Reddy home">
           <span className="brand-mark">LR</span>
           <span>
-            Lokesh Reddy
-            <small>Frontend Developer</small>
+            Rama Lokesh Reddy
+            <small>Competitive Programmer • Full-Stack Developer</small>
           </span>
         </a>
 
@@ -166,7 +167,7 @@ function App() {
               transition={{ duration: 0.55 }}
             >
               <Star size={16} />
-              Available for frontend collaboration
+              Open to work | Competitive Programmer | Full-Stack Developer | Data Analyst
             </motion.p>
 
             <motion.h1
@@ -174,7 +175,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.08 }}
             >
-              I build polished, animated portfolio experiences with a strong product feel.
+              I build high-signal web experiences with code, clarity, and motion.
             </motion.h1>
 
             <motion.p
@@ -183,9 +184,10 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.16 }}
             >
-              I’m Lokesh Reddy, a frontend developer focused on responsive interfaces,
-              purposeful motion, and design systems that help ideas feel sharp from the
-              first scroll.
+              I’m Rama Lokesh Reddy Penumallu, a BTech CSE student at Aditya University
+              focused on full-stack development, data analysis, and competitive
+              programming. I like turning complex ideas into polished interfaces that are
+              easy to scan, easy to use, and built to last.
             </motion.p>
 
             <motion.div
@@ -219,24 +221,24 @@ function App() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.75, delay: 0.18 }}
           >
-            <div className="avatar-card" aria-label="Lokesh Reddy avatar illustration">
+            <div className="avatar-card" aria-label="Rama Lokesh Reddy avatar illustration">
               <div className="avatar-orbit" />
               <div className="avatar-core">LR</div>
-              <div className="avatar-tag">UI polish + motion</div>
+              <div className="avatar-tag">BTech CSE • Aditya University</div>
             </div>
 
             <div className="panel-list">
               <div>
                 <BriefcaseBusiness size={18} />
-                <span>Building frontend systems with clean hierarchy</span>
+                <span>MERN stack developer trainee at AIM Technologies</span>
               </div>
               <div>
                 <PanelsTopLeft size={18} />
-                <span>Animating sections with transform and opacity only</span>
+                <span>Data analyst intern with Python, SQL, Excel, and Power BI</span>
               </div>
               <div>
                 <Bot size={18} />
-                <span>Turning design briefs into high-signal interfaces</span>
+                <span>Class representative and competitive programmer</span>
               </div>
             </div>
           </motion.aside>
@@ -255,7 +257,7 @@ function App() {
               <Sparkles size={16} />
               About
             </p>
-            <h2>A frontend craft that balances personality with structure.</h2>
+            <h2>Engineering-minded, design-aware, and always optimizing for impact.</h2>
           </div>
 
           <div className="about-grid">
@@ -266,18 +268,18 @@ function App() {
 
             <div className="about-copy">
               <p>
-                I like building websites that feel calm to use but still have character.
-                My work usually starts with layout, spacing, and typography, then grows
-                into motion and interaction details that make the page feel deliberate.
+                I’m a Computer Science and Engineering student at Aditya University with
+                a strong interest in building scalable web apps, solving algorithmic
+                problems, and turning data into useful decisions.
               </p>
               <p>
-                I’m currently focused on stronger design systems, better accessibility,
-                and scroll-driven experiences that stay smooth across mobile, tablet, and
-                desktop.
+                My recent work spans MERN stack development, dashboards, and frontend UI
+                systems. I enjoy combining structure, performance, and visual polish so
+                the final product feels intentional.
               </p>
               <p>
-                The goal is simple: create interfaces that are easy to understand, easy
-                to use, and memorable enough to stand out in a hiring review.
+                Outside the browser, I’m usually practicing DSA, reviewing system design
+                concepts, or iterating on analytics and automation ideas.
               </p>
             </div>
           </div>
@@ -296,7 +298,7 @@ function App() {
               <Code2 size={16} />
               Skills
             </p>
-            <h2>Technologies and practices I use to keep the work sharp.</h2>
+            <h2>Languages, frameworks, and tools I use across web and analytics work.</h2>
           </motion.div>
 
           <div className="skills-grid">
@@ -347,7 +349,7 @@ function App() {
               <LayoutGrid size={16} />
               Projects
             </p>
-            <h2>Selected concepts that show structure, motion, and clarity.</h2>
+            <h2>Featured work across full-stack development, UI polish, and dashboards.</h2>
           </motion.div>
 
           <div className="project-grid">
@@ -373,7 +375,9 @@ function App() {
                   <a href={project.repo} target="_blank" rel="noreferrer">
                     View repository
                   </a>
-                  <a href={project.demo}>Open highlight</a>
+                  <a href={project.demo} target="_blank" rel="noreferrer">
+                    Open demo
+                  </a>
                 </div>
               </motion.article>
             ))}
@@ -393,13 +397,13 @@ function App() {
               <Globe size={16} />
               Contact
             </p>
-            <h2>Reach out if you want a responsive interface with stronger motion.</h2>
+            <h2>Reach out for internships, collaboration, or project discussions.</h2>
           </div>
 
           <div className="contact-grid">
-            <a className="contact-card" href="mailto:lokesh.reddy@example.com">
+            <a className="contact-card" href="mailto:rlpreddy565@gmail.com">
               <Mail size={18} />
-              <span>lokesh.reddy@example.com</span>
+              <span>rlpreddy565@gmail.com</span>
             </a>
             <a
               className="contact-card"
@@ -412,19 +416,28 @@ function App() {
             </a>
             <a
               className="contact-card"
-              href="https://www.linkedin.com/in/lokesh-reddy/"
+              href="https://www.linkedin.com/in/rama-lokesh-reddy/"
               target="_blank"
               rel="noreferrer"
             >
               <Linkedin size={18} />
               <span>LinkedIn Profile</span>
             </a>
+            <a
+              className="contact-card"
+              href="https://prlr-profile.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Globe size={18} />
+              <span>Live Portfolio</span>
+            </a>
           </div>
         </motion.section>
       </main>
 
       <footer className="site-footer">
-        <p>Built by Lokesh Reddy with React, Vite, and Framer Motion.</p>
+        <p>Built by Rama Lokesh Reddy Penumallu with React, Vite, and Framer Motion.</p>
         <a href="#hero">Back to top</a>
       </footer>
     </div>
