@@ -28,6 +28,8 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const profilePhotoUrl = 'https://github.com/ramalokeshreddyp.png'
+
 const skillGroups = [
   {
     title: 'Languages',
@@ -223,9 +225,16 @@ function App() {
           >
             <div className="avatar-card" aria-label="Rama Lokesh Reddy avatar illustration">
               <div className="avatar-orbit" />
-              <div className="avatar-core">LR</div>
-              <div className="avatar-tag">BTech CSE • Aditya University</div>
+              <img
+                className="profile-photo avatar-photo"
+                src={profilePhotoUrl}
+                alt="Rama Lokesh Reddy profile photo"
+                width="420"
+                height="420"
+              />
             </div>
+
+            <div className="avatar-tag">BTech CSE • Aditya University</div>
 
             <div className="panel-list">
               <div>
@@ -263,7 +272,14 @@ function App() {
           <div className="about-grid">
             <div className="about-avatar">
               <div className="about-avatar__ring" />
-              <div className="about-avatar__initials">LR</div>
+              <img
+                className="profile-photo about-avatar__photo"
+                src={profilePhotoUrl}
+                alt="Rama Lokesh Reddy profile photo"
+                loading="lazy"
+                width="360"
+                height="360"
+              />
             </div>
 
             <div className="about-copy">
@@ -322,10 +338,11 @@ function App() {
                       <div className="skill-track" aria-hidden="true">
                         <motion.div
                           className="skill-fill"
-                          initial={{ scaleX: 0 }}
-                          whileInView={{ scaleX: 1 }}
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
                           viewport={{ once: true, amount: 0.5 }}
-                          transition={{ duration: 0.8, ease: 'easeOut' }}
+                          transition={{ duration: 0.45, ease: 'easeOut' }}
+                          style={{ width: skill.level }}
                         />
                       </div>
                     </div>
@@ -372,9 +389,6 @@ function App() {
                 </div>
 
                 <div className="project-links">
-                  <a href={project.repo} target="_blank" rel="noreferrer">
-                    View repository
-                  </a>
                   <a href={project.demo} target="_blank" rel="noreferrer">
                     Open demo
                   </a>
